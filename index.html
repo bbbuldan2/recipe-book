@@ -429,131 +429,7 @@
     </main>
 
     <script>
-      const recipes = [
-        {
-          recipe_name: "앞다리살 제육볶음",
-          servings: "2인분",
-          ingredients: ["앞다리살 500g", "대파 1대", "양파 반개"],
-          seasoning: [
-            "고추장 1큰술",
-            "진간장 4큰술",
-            "맛술 4큰술",
-            "고춧가루 2큰술 (매운맛 좋아하면 매운 고춧가루 1큰술 추가)",
-            "물엿 2큰술",
-            "다진 마늘 2큰술",
-            "굴소스 1큰술",
-            "설탕 1큰술",
-          ],
-          steps: [
-            "식용유 2큰술 두르고 앞다리살부터 굽기",
-            "고기가 90% 익으면 대파, 양파 넣기",
-            "양파가 투명해질 때까지 볶기",
-            "양념은 반만 먼저 넣고 볶기",
-            "5분 정도 더 볶은 뒤 간 보면서 남은 양념 추가하면 끝!",
-          ],
-          notes: "추천 제품: 미담채 전복 굴소스 (여사님 추천)",
-        },
-        {
-          recipe_name: "닭정육 간장 솥밥",
-          servings: "미지정 (약 2인분 추정)",
-          ingredients: [
-            "닭정육 350g",
-            "쌀 2컵",
-            "물 2컵",
-            "버터 10g",
-            "올리브유 1T",
-            "양파 반개",
-            "부추 한줌",
-            "옥수수캔",
-          ],
-          seasoning: ["간장 3T", "맛술 1T", "원당 2T", "마늘 반스푼", "후추"],
-          steps: [
-            "양파를 볶아 반투명해지면, 닭껍질을 아래로 두고 노릇하게 구운 후, 소스를 부어 졸입니다.",
-            "고기와 소스를 덜어내고, 30분 이상 불린 쌀과 같은 양의 물을 넣습니다.",
-            "중강불 (인덕션 7-8단)에서 5분, 약불 (인덕션 3-4단)에서 10분간 밥을 지은 뒤, 토핑을 얹고 뚜껑을 닫아 10분 동안 틈을 들입니다.",
-          ],
-          notes: "계량스푼 1T 기준 = 15ml (밥숟가락은 1.5배)",
-        },
-        {
-          recipe_name: "큐브떡갈비",
-          servings: "대용량 (다짐육 1kg 기준)",
-          ingredients: [
-            "소고기 다짐육 1kg (소고기다짐육+돼지고기다짐육=1kg도 가능)",
-            "팽이버섯 1/3개",
-            "표고버섯 4개",
-            "모짜렐라치즈 (슬라이스형태 추천)",
-          ],
-          seasoning: [
-            "진간장 6T",
-            "올리고당 2.5T",
-            "설탕 1.5T",
-            "다진 마늘 1.5T",
-            "맛술 4T",
-            "소금 후추 톡톡",
-            "전분가루 2T",
-            "녹인 버터 60g",
-          ],
-          steps: [
-            "팽이버섯과 표고버섯은 다져서 준비",
-            "다짐육에 모든 재료를 넣고 치대듯이 섞는다",
-            "큐브틀에 고기반죽을 깔고, 모짜렐라치즈를 올린뒤, 다시 고기반죽을 덮어 단단하게 꾹꾹 눌러준다",
-          ],
-          notes: "",
-        },
-        {
-          recipe_name: "마제소바",
-          servings: "2인분",
-          ingredients: ["중화면 2인분", "돼지고기 다짐육 100g", "쪽파", "계란 노른자"],
-          seasoning: [
-            "미림 1스푼",
-            "소금",
-            "후추",
-            "라오깐마(칠리오일) 2스푼",
-            "쯔유 2스푼",
-            "땅콩버터 2스푼",
-            "식초 2스푼",
-            "다진 마늘 반 스푼",
-            "참치액 반 스푼",
-            "깨 조금",
-            "참기름 살짝",
-          ],
-          steps: [
-            "돼지고기 다짐육 100g 에 미림 한 스푼, 소금, 후추 넣고 잘 볶아줍니다.",
-            "라오깐마 2 스푼, 쯔유 2 스푼, 땅콩버터 2 스푼, 식초 2 스푼, 다진 마늘 반 스푼, 참치액 반 스푼, 그리고 깨를 조금 넣고 잘 섞어주세요.",
-            "끓는 물에 중화면을 삶고, 면을 건져서 그릇에 담아줍니다.",
-            "볶아둔 돼지고기, 소스, 쪽파를 올리고 계란 노른자를 가운데 올려줍니다.",
-            "먹기전에 참기름 살짝 두르고 잘 비벼먹으면 완성!",
-          ],
-          notes: "",
-        },
-        {
-          recipe_name: "초당옥수수 파스타",
-          servings: "1인분 (추정)",
-          ingredients: [
-            "초당옥수수 1개 (스위트콘 대체 가능)",
-            "숏파스타",
-            "양파 1/4개",
-            "페퍼론치노",
-            "파마산치즈 1.5T",
-            "파프리카가루 0.5T (고춧가루 대체가능)",
-            "파슬리 0.5T",
-            "버터 2스푼",
-            "치킨스톡 반스푼",
-            "소금 0.5티스푼",
-            "후추",
-          ],
-          steps: [
-            "초당옥수수는 전자레인지에 3분 쪄주세요(스위트콘은 물기빼고 그냥 쓰셔도 돼요)",
-            "물 1L에 소금 반스푼보다 조금 많게 넣고 파스타 삶아주세요",
-            "양파 1/4개 다져주고 초당옥수수는 알만 준비해주세요",
-            "버터 2스푼에 양파, 페퍼론치노, 초당옥수수, 소금 0.5티스푼, 후추 넣고 볶아주세요",
-            "삶은 파스타와 면수는 살짝 자박할 정도로 붓고 치킨스톡 반스푼 넣어서 약불에 졸여가며 볶아주세요",
-            "촉촉하다 싶을 때 불끄고 접시 담아주세요",
-            "파마산치즈 1.5T, 파프리카가루 0.5T, 파슬리 0.5T 넣고 섞어서 파스타 위에 뿌려주면 완성입니다!",
-          ],
-          notes: "매콤달콤짭짤한 맛에 톡톡거리는 옥수수 식감이 특징인 파스타",
-        },
-      ];
+      let recipes = [];
 
       const ingredientAliases = {
         닭고기: ["닭", "닭고기", "닭정육"],
@@ -574,7 +450,7 @@
       const recipeTotal = document.querySelector("#recipeTotal");
       const ingredientTotal = document.querySelector("#ingredientTotal");
 
-      let selectedName = recipes[0].recipe_name;
+      let selectedName = "";
 
       function normalize(value) {
         return String(value || "")
@@ -774,14 +650,40 @@
         clearButton.style.visibility = searchInput.value ? "visible" : "hidden";
       }
 
-      recipeTotal.textContent = recipes.length;
-      ingredientTotal.textContent = new Set(
-        recipes.flatMap((recipe) =>
-          [...(recipe.ingredients || []), ...(recipe.seasoning || [])].map(
-            normalize,
+      function updateStats() {
+        recipeTotal.textContent = recipes.length;
+        ingredientTotal.textContent = new Set(
+          recipes.flatMap((recipe) =>
+            [...(recipe.ingredients || []), ...(recipe.seasoning || [])].map(
+              normalize,
+            ),
           ),
-        ),
-      ).size;
+        ).size;
+      }
+
+      async function loadRecipes() {
+        try {
+          const response = await fetch("recipes.json", { cache: "no-store" });
+
+          if (!response.ok) {
+            throw new Error(`recipes.json load failed: ${response.status}`);
+          }
+
+          const data = await response.json();
+          recipes = Array.isArray(data) ? data : [];
+          selectedName = recipes[0]?.recipe_name || "";
+          updateStats();
+          render();
+        } catch (error) {
+          console.error(error);
+          recipeTotal.textContent = "0";
+          ingredientTotal.textContent = "0";
+          resultCount.textContent = "0개";
+          results.innerHTML = `<div class="empty">recipes.json 파일을 불러오지 못했어요.</div>`;
+          detail.innerHTML = `<div class="detail-inner empty">GitHub Pages 링크에서 열었는지, index.html과 recipes.json이 같은 위치에 있는지 확인해 주세요.</div>`;
+          clearButton.style.visibility = "hidden";
+        }
+      }
 
       searchInput.addEventListener("input", render);
       clearButton.addEventListener("click", () => {
@@ -790,7 +692,7 @@
         render();
       });
 
-      render();
+      loadRecipes();
     </script>
   </body>
 </html>

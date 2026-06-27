@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>나만의 레시피북</title>
+    <title>반쪽이네 레시피모음집</title>
     <style>
       :root {
         --bg: #f8faf7;
@@ -73,9 +73,9 @@
 
       .stats {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 8px;
-        min-width: 220px;
+        min-width: 110px;
       }
 
       .stat {
@@ -379,16 +379,12 @@
         <div class="top">
           <div>
             <p class="eyebrow">Recipe Archive</p>
-            <h1>나만의 레시피북</h1>
+            <h1>반쪽이네 레시피모음집</h1>
           </div>
           <div class="stats">
             <div class="stat">
               <span>레시피</span>
               <strong id="recipeTotal">0</strong>
-            </div>
-            <div class="stat">
-              <span>재료</span>
-              <strong id="ingredientTotal">0</strong>
             </div>
           </div>
         </div>
@@ -448,7 +444,6 @@
       const detail = document.querySelector("#detail");
       const resultCount = document.querySelector("#resultCount");
       const recipeTotal = document.querySelector("#recipeTotal");
-      const ingredientTotal = document.querySelector("#ingredientTotal");
 
       let selectedName = "";
 
@@ -652,13 +647,6 @@
 
       function updateStats() {
         recipeTotal.textContent = recipes.length;
-        ingredientTotal.textContent = new Set(
-          recipes.flatMap((recipe) =>
-            [...(recipe.ingredients || []), ...(recipe.seasoning || [])].map(
-              normalize,
-            ),
-          ),
-        ).size;
       }
 
       async function loadRecipes() {
@@ -677,7 +665,6 @@
         } catch (error) {
           console.error(error);
           recipeTotal.textContent = "0";
-          ingredientTotal.textContent = "0";
           resultCount.textContent = "0개";
           results.innerHTML = `<div class="empty">recipes.json 파일을 불러오지 못했어요.</div>`;
           detail.innerHTML = `<div class="detail-inner empty">GitHub Pages 링크에서 열었는지, index.html과 recipes.json이 같은 위치에 있는지 확인해 주세요.</div>`;
